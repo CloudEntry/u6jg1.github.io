@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158811758-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158811758-1');
+  </script>
+  <title>Uni Events Hub - Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 887px), screen and (min-device-width: 887px)" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 887px), screen and (max-device-width: 887px)" href="styles/small-device.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/dmi7jsx.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="assets/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+  <div id="page-container">
+
+    <div class="navbar">
+      <p>Uni Events Hub <span id="beta">Beta</span></p>
+      <a href="index.html" id="logo"><i class="fas fa-border-style"></i></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+      <div class="hamburger" onclick="ham_menu()">
+        <div class="hb-divs"></div>
+        <div class="hb-divs"></div>
+        <div class="hb-divs"></div>
+      </div>
+    </div>
+
+    <div class="content" id="settings-content">
+
+      <div id="mob-menu">
+        <div><a href="index.html" onclick="close_menu()"><i class="fas fa-home"></i></a></div>
+        <div><a href="profile.html" onclick="close_menu()"><i class="fas fa-user"></i></a></div>
+        <div><a href="about.html" onclick="close_menu()"><i class="fas fa-info-circle"></i></a></div>
+        <div><a href="settings.html" onclick="close_menu()"><i class="fas fa-cog"></i></a></div>
+      </div>
+
+      <div id="prompt"></div>
+
+      <div id="change-pword">
+        <h3>Change password</h3>
+        <input class="settings-input" type="password" id="old_pword" placeholder="Old password" size="50"><br>
+        <input class="settings-input" type="password" id="new_pword" placeholder="New password" size="50"><br>
+        <input class="settings-input" type="password" id="new_pword_retype" placeholder="Retype new password" size="50"><br>
+        <button onclick="change_pword()">Change Password</button><br><br>
+      </div>
+
+      <div id="del-acc">
+        <h3>Delete account</h3>
+        <input class="settings-input" type="password" id="del_acc_pword" placeholder="Password" size="50"><br>
+        <button onclick="delete_account()">Delete Account</button><br><br>
+      </div>
+
+      <div id="contact-us">
+        <h3>Contact us</h3>
+        <select id="feedback-type" onchange="">
+          <option value="report-bug" selected="selected">Report a Bug</option>
+          <option value="suggest-improvement">Suggest an Improvement</option>
+          <option value="suggest-new-feature">Suggest a New Feature</option>
+          <option value="other">Other</option>
+        </select><br>
+        <input class="settings-input" type="text" id="email-cu" placeholder="Email (Optional)"  size="50"><br>
+        <textarea class="settings-input" id="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea><br>
+        <button onclick="submit_feedback()">Submit</button>
+      </div>
+
+    </div>
+
+    <footer id="footer">
+      <span id="footer-text"><i class="far fa-copyright"></i> Uni Events Hub. 2020. <span id="p_not_on_mob">All rights reserved.<!-- </span> <a href="about-us.html" target="_blank">About Us</a></span> -->
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script src="scripts/settings.js"></script>
+  <script src="scripts/mobile.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://kit.fontawesome.com/c0dc82dd90.js" crossorigin="anonymous"></script>
+</body>
+</html>
